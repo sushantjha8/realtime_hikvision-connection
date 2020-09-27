@@ -1,0 +1,15 @@
+version: "3.7"
+
+
+services: 
+
+
+    app:
+        # external_links: 
+        #     - rtsp://192.168.0.100:8080
+        build : .
+        image : hikvision-cv
+        command: python ./one_cam.py
+        volumes:
+            - .:/code
+
